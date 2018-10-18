@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Crawl</title>
+</head>
+<body>
+	<div>
+		<form method="post" th:action="@{/crawl}" th:object="${crawler}" >
+			<div class="form-group">
+				<label>URL</label>
+				<input class="form-control" type="text"  name="url" value="https://viblo.asia/"/>
+			</div>
+			<div class="form-group">
+				<label>Title Class name</label>
+				<input class="form-control" type="text" name="titleClass" value="h1.article-content__title"/>
+			</div>
+			<div class="form-group">
+				<label>Author class name</label>
+				<input class="form-control" type="text"  name="authorClass" value="div.post-author"/>
+			</div>
+			<div class="form-group">
+				<label>Content class name</label>
+				<input class="form-control" type="text"  name="contentClass" value="div.article-content__body"/>
+			</div>
+			<button type="submit" class="btn btn-primary">Crawl</button>
+		</form>
+	</div>
+</body>
+</html>
